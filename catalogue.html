@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue page</title>
+    <title>Book Catalog</title>
+    <link rel="stylesheet" href="catalogue.css">
 </head>
 <body>
-    
+    <div class="catalog">
+        <table>
+            <tr>
+                <td class="book-image"><img src="https://m.media-amazon.com/images/I/516RaKSnC6L._AC_UF1000,1000_QL80_.jpg" alt="Book 1"></td>
+                <td class="book-details">
+                    <p><strong>Book Name:</strong> XML Bible </p>
+                    <p><strong>Author:</strong> Winston</p>
+                    <p><strong>Publication:</strong> Wiely</p>
+                </td>
+                <td class="book-price">$40.50</td>
+                <td class="add-to-cart"><button onclick="addToCart('XML Bible', 'Winston', 'Wiely', 40.50)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td class="book-image"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1385600294i/27543.jpg" alt="Book 2"></td>
+                <td class="book-details">
+                    <p><strong>Book Name:</strong> AI</p>
+                    <p><strong>Author:</strong> S.Russel</p>
+                    <p><strong>Publication:</strong> Princeton hall</p>
+                </td>
+                <td class="book-price">$63.50</td>
+                <td class="add-to-cart"><button onclick="addToCart('AI', 'S. Russel', 'Princeton hall', 40.50)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td class="book-image"><img src="https://media.wiley.com/product_data/coverImage300/2X/07821402/078214022X.jpg" alt="Book 3"></td>
+                <td class="book-details">
+                    <p><strong>Book Name:</strong> Java 2  </p>
+                    <p><strong>Author:</strong> Watson </p>
+                    <p><strong>Publication:</strong> BPB publications</p>
+                </td>
+                <td class="book-price">$40.50</td>
+                <td class="add-to-cart"><button onclick="addToCart('Java 2', 'Watson', 'BPB publications', 40.50)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td class="book-image"><img src="https://img.thriftbooks.com/api/images/m/8ec8fcbda8f1fe402ce61ffdc1c8fbe01b5499f3.jpg" alt="Book 4"></td>
+                <td class="book-details">
+                    <p><strong>Book Name:</strong>  HTML in 24 hours</p>
+                    <p><strong>Author:</strong> Sam Peter</p>
+                    <p><strong>Publication:</strong> Sam publication</p>
+                </td>
+                <td class="book-price">$63.50</td>
+                <td class="add-to-cart"><button onclick="addToCart('HTML in 24 hours', 'Sam Peter', 'Sam publications', 40.50)">Add to Cart</button></td>
+            </tr>
+        </table>
+    </div>
 </body>
+<script>
+    function addToCart(name, author, publication, price) {
+    var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    cartItems.push({
+        name: name,
+        author: author,
+        publication: publication,
+        price: price,
+        quantity: 1
+    });
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    alert("Item added to cart!");
+}
+
+</script>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label>Sex:</label>
+                <input type="radio" id="male" name="sex" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <select id="dob-day" name="dob-day">
+                    <option value="">Day</option>
+                </select>
+                <select id="dob-month" name="dob-month">
+                    <option value="">Month</option>
+                </select>
+                <select id="dob-year" name="dob-year">
+                    <option value="">Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Languages Known:</label><br>
+                <input type="checkbox" id="english" name="languages[]" value="english" required>
+                <label for="english">English</label><br>
+                <input type="checkbox" id="telugu" name="languages[]" value="telugu">
+                <label for="telugu">Telugu</label><br>
+                <input type="checkbox" id="hindi" name="languages[]" value="hindi">
+                <label for="hindi">Hindi</label><br>
+                <input type="checkbox" id="tamil" name="languages[]" value="tamil">
+                <label for="tamil">Tamil</label><br>
+            </div>
+            <div class = "form-group">
+                <label for = "address">Address:</label><br>
+                <textarea id = "address" name = "address" rows = "4" required></textarea>
+            </div>
+            <div class="button-group">
+                <input type = "submit" value = "Submit">
+                <input type = "reset" value = "Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    function generateDays() {
+            var select=document.getElementById("dob-day");
+            for (var i=1;i<=31;i++) {
+                var option=document.createElement("option");
+                option.value=i<10?"0"+i:""+ i;
+                option.text=option.value;
+                select.appendChild(option);
+            }
+        }
+        function generateMonths() {
+            var select = document.getElementById("dob-month");
+            var months = [
+                "January", "February", "March", "April", "May", "June", "July",
+                "August", "September", "October", "November", "December"
+            ];
+            for (var i = 0; i < months.length; i++) {
+                var option = document.createElement("option");
+                var monthNum = i + 1 < 10 ? "0" + (i + 1) : "" + (i + 1); // Leading zero for single-digit months
+                option.value = monthNum;
+                option.text = months[i];
+                select.appendChild(option);
+            }
+        }
+        function generateYears(startYear, endYear) {
+            var select = document.getElementById("dob-year");
+            for (var i = endYear; i >= startYear; i--) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                select.appendChild(option);
+            }
+        }
+        generateDays();
+        generateMonths();
+        generateYears(1920, new Date().getFullYear());
+</script>

@@ -1,0 +1,47 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f5f5f5;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.catalog {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.book-image img {
+    width: 100px;
+    height: auto;
+}
+
+.book-details p {
+    margin: 10px;
+}
+
+.book-price, .add-to-cart {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.book-price {
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.add-to-cart button {
+    background-color: #410a0a;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart button:hover {
+    background-color: #af2f2f;
+}
