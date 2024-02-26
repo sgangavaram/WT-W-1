@@ -34,20 +34,7 @@ th {
     background-color: #f2f2f2;
 }
 
-.button-group {
-    text-align: center;
-    margin-top: 20px;
+p {
+    text-align: right;
 }
 
-.button-group button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-.button-group button:hover {
-    background-color: #45a049;
-}
