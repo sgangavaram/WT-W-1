@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Page</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('/Week-4/Images/cat-silhouette-wallpaper-preview.jpg');
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        .element-background {
+            background-image: url('/Week-4/Images/cat-portrait-in-black-and-white-olga-akulinina.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .headline {
+            color: rgb(145, 140, 140);
+            font-size: 22px;
+            font-family: Arial, sans-serif;
+            text-decoration: underline;
+            text-align: center;
+            display: block;
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        .layer1 {
+            position: relative;
+            font-size: 16px;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        .layer2 {
+            position: relative;
+            font-size: 20px;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .custom-cursor {
+            cursor: url('custom_cursor.png'), auto;
+        }
+
+        .cat-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .cat-info div {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        .cat-info h2 {
+            color: rgb(145, 140, 140);
+            font-size: 22px;
+            font-family: Arial, sans-serif;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .cat-info p {
+            color: #d5d8d6;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-background">
+        <h1 style="color: white; text-shadow: 0 0 1px black;">Catster</h1>
+    </div>
+
+    <br>
+
+    <b class="headline">Cat Breeds</b>
+
+    <div class="layer1">
+        <div class="cat-info">
+            <div>
+                <h2>Maine Coon</h2>
+                <p>The Maine Coon is one of the oldest natural breeds in North America. They are highly intelligent, gentle, and friendly cats, and are often referred to as "the gentle giants" of the cat world.</p>
+            </div>
+            <div>
+                <h2>Siamese</h2>
+                <p>Siamese cats are one of the first distinctly recognized breeds of Asian cat. They are known for their striking color points, short coat, and blue almond-shaped eyes. Siamese are usually very vocal, sociable and playful.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer2">
+        <div class="cat-info">
+            <div>
+                <h2>Persian</h2>
+                <p>The Persian is a long-haired breed of cat characterized by its round face and short muzzle. Persians are generally quiet and easy-going. They are affectionate and enjoy sitting in their owner's laps and being petted.</p>
+            </div>
+            <div>
+                <h2>Bengal</h2>
+                <p>The Bengal is a domestic cat breed developed to look like exotic wild cats such as leopards, ocelots, margays and clouded leopards. Bengals are active, playful, and have a strong desire to be near their human companions.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <a href="#" class="custom-cursor">Learn more about cats</a>
+</body>
+</html>
