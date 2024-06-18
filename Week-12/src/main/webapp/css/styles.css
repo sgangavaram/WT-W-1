@@ -42,7 +42,7 @@ nav ul li a:hover {
     padding: 2em;
     background-color: white;
     margin: 1em auto;
-    max-width: 800px;
+    max-width: 80%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -53,4 +53,47 @@ nav ul li a:hover {
 .content p {
     color: #666;
     line-height: 1.6;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content ul li{
+    color: #666;
+    line-height: 1.6;
+}
+
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.company-logos{
+    padding-right: 60px;
+    padding-left: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.container img{
+    padding: 3%;
+    width: 110px;
+    height: auto;
+    /* margin-left: 50px; */
+}
+
+.department-list {
+    align-items: center;
+}
+.department-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+   
+    flex-direction: column;
+    gap: 15px;
 }

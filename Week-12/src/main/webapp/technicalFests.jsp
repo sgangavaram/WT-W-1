@@ -21,6 +21,11 @@
     <div class="content">
         <h2>Technical Fests</h2>
         <p>Details about various technical fests conducted at VNR VJIET.</p>
+        <ul>
+            <li>Convergence</li>
+            <li>Ecficio</li>
+            <li>OpenHouse</li>
+        </ul>
     </div>
 </body>
 </html>
